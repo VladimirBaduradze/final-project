@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png">
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/db2aafb24f.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap");
+    </style>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,700&family=Oswald:wght@300&family=Pacifico&display=swap');
+      </style>
+    <title>Final work</title>
+  </head>
+  <body>
+    <header>
+
+      <div class="container">
+        <nav class="upper-navigation">
+          <h1><img src="/img/logo.png" alt=""></h1>
+          <ul class="upper-ul">
+            <li class="upper-li"><a href="/index.html" target="_blank">Home</a></li>
+            <li class="upper-li"> <a href="/news.html" target="_blank">News</a></li>
+            <li class="upper-li"><a href="/consoles.html" target="_blank">Consoles</a></li>
+            <li class="upper-li">Clients</li>
+            <li class="upper-li"><a href="/about-us.html">About us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="socialMedia">
+        <div class="facebook">
+          <a href="https://www.facebook.com/" target="_blank"></a>
+        </div>
+        <div class="instagram">
+          <a href="https://www.instagram.com/" target="_blank"></a>
+        </div>
+        <div class="youtube">
+          <a href="https://www.youtube.com/c/IGN/videos" target="_blank"></a>
+        </div>
+      </section>
+
+
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11155.87769638032!2d44.77622571719866!3d41.70781974241258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440cdb009791db%3A0x597056344cd2ce7f!2sRustaveli%20M%2FS!5e0!3m2!1sru!2sge!4v1655197381886!5m2!1sru!2sge" width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="map-text">
+          <p>Address&#58; Lorem ipsum dolor sit amet consectetur &#59;</p>
+          <p>Phone number&#58; 995 555 123 456 &#59;</p>
+          <p>Working Hours&#58; From 9<sup>am</sup> to 10<sup>pm</sup> &#59;</p>
+        </div>
+      </div>
+
+
+
+
+      
+    </main>
+    <footer>
+
+      <button class="open-button" onclick="openForm()" id="chat-button"><div class="chat-img"></div></button>
+
+      <div class="chat-popup" id="myForm">
+        <form action="https://formsubmit.co/vladimirbaduradze@gmail.com" method="POST" target="_blank" class="form-container">
+          <input type="hidden" name="_captcha" value="false">
+          <h2 class="send-message">Send me your message! :) (it does actually work)</h2>
+          
+      
+          <!-- <label for="msg"><b>max.1000 symbols</b></label> -->
+          <textarea placeholder="Type your message.." name="msg" required></textarea>
+          <input type="email" name="email" placeholder="   Your Email Address" class="email-address">
+            <button type="submit" class="btn send"><span>V</span></button>
+            <button type="button" class="btn cancel" onclick="closeForm()" id="redButton"><span>X</span>
+          </div>
+        </form>
+      </div>
+
+  
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

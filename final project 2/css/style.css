@@ -1,0 +1,902 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: rgb(255, 255, 255);
+}
+
+body {
+  min-height: 100vh;
+  background: url(../img/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1 img {
+  width: 30px;
+  height: 30px;
+}
+
+.today {
+  margin-top: 70px;
+  margin-left: 40px;
+  color: #fff;
+}
+
+.sale {
+  width: 25px;
+}
+
+.owl-carousel {
+  margin-top: 20px;
+}
+
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel button.owl-dot {
+  color: white;
+}
+
+.item {
+  background-color: #04aa6d;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.item img {
+  object-fit: contain;
+}
+
+.item-video {
+  height: 259px;
+}
+
+.game-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game img {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  border-radius: 10px;
+  transition: all 0.4s;
+}
+
+.game img:hover {
+  cursor: pointer;
+  padding: 2px;
+  border: 2px solid rgb(59, 20, 234);
+}
+
+.game p,
+.map-text p {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 18px;
+  color: #fff;
+}
+
+button {
+  cursor: pointer;
+  padding: 6px;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.upper-navigation {
+  background-color: rgb(0, 0, 0);
+  padding: 10px;
+  box-shadow: 2px 4px 10px black;
+  position: fixed;
+  margin-left: 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding-left: 20px;
+  margin-right: -10px;
+  margin-top: -10px;
+  z-index: 2;
+}
+
+.upper-ul {
+  display: flex;
+}
+
+.upper-li {
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  transition: color 0.5s;
+  font-family: "Josefin Sans", sans-serif;
+  color: white;
+}
+
+.upper-li::after {
+  content: "";
+  background-color: #1e5ddb;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+nav ul li:hover {
+  color: #fff;
+}
+
+nav ul li:hover::after {
+  top: 50%;
+  opacity: 1;
+}
+
+.flash {
+  position: fixed;
+  right: 200px;
+  top: 85px;
+  color: #fff;
+}
+.news {
+  position: fixed;
+  right: 0px;
+  top: 120px;
+  margin-right: 100px;
+  width: 280px;
+  height: 80%;
+  overflow-y: auto;
+  border-radius: 10px;
+  background-color: #1e5ddb;
+  padding: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.newsArticle {
+  text-align: justify;
+}
+
+.newsBottom {
+  margin-bottom: 20px;
+  /* padding: 5px; */
+}
+
+.newsImage {
+  margin-top: 10px;
+  width: 250px;
+  height: 150px;
+}
+
+.newsImage img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.news a p {
+  margin-top: 4px;
+  margin-bottom: -4px;
+}
+.news-horizontal {
+  margin-top: 100px;
+  margin-bottom: 44px;
+  margin-left: 100px;
+  width: 900px;
+  background-color: #1e5ddb;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.news-arictle {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  padding-right: 40px;
+}
+
+.article-image {
+  width: 100px;
+  height: 100px;
+}
+.article-image img {
+  width: 100px;
+  border-radius: 10px;
+  transition: all 0.2s;
+}
+.news-arictle:hover .article-image img {
+  transform: scale(1.04);
+}
+
+.article-text {
+  width: 900px;
+  margin-left: 10px;
+  margin-bottom: 50px;
+  font-family: "Oswald", sans-serif;
+}
+
+.title {
+  color: #fff;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  background-color: #ffffffd5;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+.contentBox {
+  position: relative;
+  width: 650px;
+  height: 370px;
+  background-color: aliceblue;
+  border-radius: 20px;
+  display: flex;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  margin: 240px auto;
+}
+
+.contentBox .imageBox {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.contentBox .imageBox::before {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background-color: #1e5ddb;
+  border-radius: 32% 68% 83% 17% / 18% 21% 79% 82%;
+  margin-right: 50px;
+}
+
+.contentBox .imageBox img {
+  position: relative;
+  max-width: 375px;
+  z-index: 1;
+  margin-bottom: 95px;
+  margin-right: 25px;
+}
+
+.contentBox .content {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.contentBox .content h3 {
+  font-weight: 300;
+  font-size: 2em;
+  line-height: 1em;
+}
+
+.contentBox .content h2 {
+  color: rgb(213, 90, 90);
+  font-size: 4em;
+}
+
+.contentBox .content h2 span {
+  color: rgb(0, 0, 0);
+}
+
+.contentBox .content a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgb(213, 90, 90);
+  margin-top: 15px;
+  color: aliceblue;
+  border-radius: 5px;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(140, 148, 156, 0.518);
+  border-radius: 50%;
+  background-image: url(../img/cancel.png);
+  background-size: 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.socialMedia {
+  display: flex;
+  width: 100px;
+  height: 30px;
+  position: fixed;
+  top: 12px;
+  right: 50px;
+  z-index: 2;
+  visibility: visible;
+}
+
+.facebook,
+.instagram,
+.youtube {
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
+}
+
+.facebook {
+  background-image: url(../img/fb-color.png);
+  background-size: 100%;
+  transition: 0.4s;
+}
+
+.instagram {
+  background-image: url(../img/insta-color.png);
+  background-size: 100%;
+  transition: 0.4s;
+}
+
+.youtube {
+  background-image: url(../img/youtube-red.png);
+  background-size: 100%;
+  transition: 0.4s;
+}
+
+.facebook img,
+.instagram img,
+.youtube img {
+  width: 100%;
+}
+
+.facebook a,
+.instagram a,
+.youtube a {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.hello {
+  color: #1e5ddb;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+}
+
+.email-address {
+  border: none;
+  /* margin-top: 5px; */
+  margin-bottom: 15px;
+  margin-left: 70px;
+  background-color: none;
+  border-radius: 5px;
+  height: 20px;
+}
+
+.open-button {
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  background-image: url(../img/send-message.png);
+  background-color: #04aa6d;
+  border: 2px solid rgb(255, 255, 255);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: all 0.4s;
+  animation: slideDown 0.2s ease-in-out;
+}
+
+.open-button:hover {
+  transform: scale(1.14);
+}
+
+.chat-img img {
+  width: 100%;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  /* border: 3px solid #f1f1f1; */
+  z-index: 9;
+  border-radius: 30px;
+  animation: slideUp 0.4s ease-in-out;
+}
+
+.send-message {
+  color: white;
+}
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: rgb(0, 0, 0);
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+  border-radius: 5px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #04aa6d;
+
+  color: white;
+  padding: 5px 5px;
+  border: none;
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+s {
+  text-decoration: line-through;
+}
+
+footer p {
+  position: absolute;
+  bottom: 0;
+  color: #ffffff;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.game-genre2 {
+  height: 250px;
+  width: 250px;
+  margin: 20px;
+}
+
+.game-genre2 a img,
+.game-genre2 img {
+  height: 250px;
+  width: 250px;
+  position: relative;
+  align-content: center;
+}
+
+.game-genre2 p {
+  position: absolute;
+  margin: 120px auto;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.game-genre-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.scrollmenu {
+  overflow: auto;
+  white-space: nowrap;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.form-container .send {
+  border: 2px solid rgb(255, 255, 255);
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+  border: 2px solid rgb(255, 255, 255);
+  font-size: 30px;
+  transition: all 0.4s;
+}
+
+.send {
+  margin-left: 90px;
+  font-size: 30px;
+  transition: all 0.4s;
+}
+
+.send-message {
+  color: #fff;
+}
+
+.form-container .cancel:hover,
+.send:hover {
+  transform: scale(1.1);
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}
+
+.map {
+  margin-top: 100px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: -30px;
+}
+
+.map iframe {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.map-text {
+  margin-left: 20px;
+  margin-top: 30px;
+}
+
+.map-text p {
+  width: 350px;
+  margin-top: 10px;
+}
+
+.card-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+
+.card-container .card {
+  position: relative;
+  width: 600px;
+  height: 350px;
+  margin: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: linear-gradient(270deg, rgb(33, 31, 31), rgb(16, 99, 183));
+  border-radius: 10px;
+  box-shadow: 2px 4px 10px black;
+}
+
+.card-price {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: white;
+  font-size: 20px;
+}
+
+.card-container .card img {
+  position: absolute;
+  bottom: 0;
+  height: 350px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+
+.card-container .card:hover img {
+  left: 70%;
+  height: 300px;
+}
+
+/* .ps4:hover{
+  left: 76%;
+} */
+
+.card-container .card .content {
+  position: relative;
+  width: 50%;
+  left: 20%;
+  opacity: 0.1;
+  visibility: hidden;
+  padding: 10px 28px 20px 40px;
+  transition: left 0.5s, opacity 0.5s, visibility 0.3s;
+}
+
+.card-container .card:hover .content {
+  opacity: 1;
+  left: 0;
+  visibility: visible;
+}
+
+.card-container .card .content h2 {
+  color: aliceblue;
+  text-transform: uppercase;
+}
+
+.card-container .card .content p {
+  color: aliceblue;
+  width: 225px;
+  text-align: justify;
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+}
+
+.card-container .card .content a {
+  position: relative;
+  color: black;
+  background-color: aliceblue;
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.footer {
+  height: 200px;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 2px 4px 10px black;
+  position: relative;
+  z-index: -1;
+}
+
+.buttonUp {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  background-color: #04aa6d;
+  border: 2px solid rgb(255, 255, 255);
+  transition: all 0.4s;
+}
+
+.buttonUp:hover {
+  transform: scale(1.1);
+}
+.buttonUp a {
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+
+.buttonUp a img {
+  width: 25px;
+  height: 25px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100vh);
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(100vh);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .upper-navigation {
+    margin-left: 0px;
+    margin-right: -10px;
+    margin-top: -10px;
+  }
+  .contentBox {
+    width: 400px;
+    height: 200px;
+    margin: 240px auto;
+  }
+
+  .contentBox .imageBox {
+    width: 150px;
+    height: 250px;
+    /* margin-left: 20px; */
+  }
+
+  .contentBox .imageBox::before {
+    width: 144px;
+    height: 144px;
+    margin-right: 16px;
+  }
+
+  .contentBox .imageBox img {
+    position: relative;
+    max-width: 190px;
+    margin-bottom: 72px;
+    margin-right: 25px;
+  }
+
+  .contentBox .content {
+    width: 240px;
+    height: 240px;
+  }
+
+  .contentBox .content h3 {
+    font-weight: 300;
+    font-size: 1.6em;
+    line-height: 1em;
+  }
+
+  .contentBox .content h2 {
+    font-size: 2em;
+  }
+
+  .contentBox .content a {
+    align-items: center;
+  }
+
+  .closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .contentBox {
+    width: 300px;
+    height: 230px;
+  }
+
+  .contentBox .imageBox {
+    width: 150px;
+    height: 200px;
+  }
+
+  .contentBox .imageBox::before {
+    width: 130px;
+    height: 130px;
+    margin-right: 15px;
+    margin-top: 30px;
+  }
+
+  .contentBox .imageBox img {
+    position: relative;
+    max-width: 190px;
+    margin-bottom: 52px;
+    margin-right: 25px;
+  }
+
+  .contentBox .content {
+    width: 240px;
+    height: 240px;
+  }
+
+  .contentBox .content h3 {
+    font-weight: 300;
+    font-size: 1.2em;
+    line-height: 1em;
+  }
+
+  .contentBox .content h2 {
+    font-size: 1.5em;
+  }
+
+  .contentBox .content a {
+    align-items: center;
+  }
+
+  .closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background-size: 10px;
+  }
+
+  .socialMedia {
+    visibility: hidden;
+  }
+  .today {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 401px) {
+  .upper-navigation {
+    padding: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
+
+  .upper-ul {
+    font-size: 14px;
+  }
+
+  .contentBox {
+    margin: 140px auto;
+    height: 210px;
+  }
+
+  .today {
+    display: flex;
+    justify-content: center;
+  }
+
+  .map-text p {
+    width: 250px;
+    margin-top: 10px;
+    margin-left: -20px;
+  }
+}
