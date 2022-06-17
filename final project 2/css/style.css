@@ -1,3 +1,5 @@
+/* do not delete beyond this */
+
 * {
   margin: 0;
   padding: 0;
@@ -23,6 +25,8 @@ body {
 h1 img {
   width: 30px;
   height: 30px;
+  position: absolute;
+  top: 100px;
 }
 
 .today {
@@ -107,25 +111,27 @@ button {
 }
 
 .upper-navigation {
+  top: 0;
   background-color: rgb(0, 0, 0);
   padding: 10px;
   box-shadow: 2px 4px 10px black;
   position: fixed;
-  margin-left: 0px;
+  /* margin-left: 0px; */
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  padding-left: 20px;
-  margin-right: -10px;
-  margin-top: -10px;
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* padding-left: 20px; */
+  /* margin-right: -10px; */
+  /* margin-top: -70px; */
   z-index: 2;
 }
 
-.upper-ul {
+ul {
   display: flex;
+  margin-left: 60px;
 }
 
-.upper-li {
+li {
   display: inline-block;
   padding: 10px;
   cursor: pointer;
@@ -136,7 +142,7 @@ button {
   color: white;
 }
 
-.upper-li::after {
+li::after {
   content: "";
   background-color: #1e5ddb;
   width: 100%;
@@ -374,7 +380,7 @@ nav ul li:hover::after {
 }
 
 .instagram {
-  background-image: url(../img/insta-color.png);
+  background-image: url(../img/instagram.png);
   background-size: 100%;
   transition: 0.4s;
 }
@@ -751,10 +757,9 @@ footer p {
 }
 
 @media only screen and (max-width: 770px) {
-  .upper-navigation {
-    margin-left: 0px;
-    margin-right: -10px;
-    margin-top: -10px;
+
+  ul {
+    margin-left: 10px;
   }
   .contentBox {
     width: 400px;
@@ -873,14 +878,14 @@ footer p {
 }
 
 @media only screen and (max-width: 401px) {
-  .upper-navigation {
+  /* .upper-navigation {
     padding: 0px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 10px;
-  }
+  } */
 
-  .upper-ul {
+  .ul {
     font-size: 14px;
   }
 

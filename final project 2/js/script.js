@@ -1,3 +1,18 @@
+const navigation = ["Home", "News", "Consoles", "Clients", "About us"];
+const pages = ["index.html", "news.html", "consoles.html", "clients.html","about-us.html"];
+
+let navtxt = "<ul>";
+for (let i = 0; i < navigation.length; i++) {
+  navtxt += "<li><a href=" + pages[i] + ">" + navigation[i] + "</a></li>";
+}
+navtxt += "</ul>";
+
+document.getElementById("navigation").innerHTML = navtxt;
+
+
+
+
+
 const popup = document.querySelector(".popup");
 const close = document.querySelector(".closeBtn");
 
