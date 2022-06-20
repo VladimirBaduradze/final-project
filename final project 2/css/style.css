@@ -101,6 +101,20 @@ button {
   padding: 6px;
 }
 
+.figurine img {
+  width: 250px;
+  height: 250px;
+  margin: 10px;
+  border-radius: 10px;
+  transition: all 0.4s;
+}
+
+.figurine img:hover {
+  cursor: pointer;
+  padding: 2px;
+  border: 2px solid rgb(255, 255, 255);
+}
+
 .container {
   width: 100%;
   display: flex;
@@ -547,7 +561,6 @@ footer p {
   width: 250px;
   margin: 20px;
 }
-
 .game-genre2 a img,
 .game-genre2 img {
   height: 250px;

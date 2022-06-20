@@ -1,9 +1,9 @@
-const navigation = ["Home", "News", "Consoles", "Clients", "About us"];
+const navigation = ["Home", "News", "Consoles", "Merchandise", "About us"];
 const pages = [
   "index.html",
   "news.html",
   "consoles.html",
-  "clients.html",
+  "merchandise.html",
   "about-us.html",
 ];
 
@@ -15,19 +15,7 @@ navtxt += "</ul>";
 
 document.getElementById("navigation").innerHTML = navtxt;
 
-const popup = document.querySelector(".popup");
-const close = document.querySelector(".closeBtn");
-
-window.onload = function () {
-  setTimeout(function () {
-    popup.style.display = "block";
-  }, 4000);
-};
-
-close.addEventListener("click", () => {
-  popup.style.display = "none";
-});
-
+///////////////
 function openForm() {
   document.getElementById("myForm").style.display = "block";
   document.getElementById("chat-button").style.display = "none";
@@ -37,6 +25,8 @@ function closeForm() {
   document.getElementById("myForm").style.display = "none";
   document.getElementById("chat-button").style.display = "block";
 }
+
+//////////
 
 $(".owl-carousel").owlCarousel({
   loop: true,
@@ -62,23 +52,7 @@ $(".owl-carousel").owlCarousel({
   },
 });
 
-// $(".owl-carousel").owlCarousel({
-//   items: 2,
-//   merge: true,
-//   loop: true,
-//   margin: 10,
-//   video: true,
-//   lazyLoad: true,
-//   center: true,
-//   responsive: {
-//     480: {
-//       items: 2,
-//     },
-//     600: {
-//       items: 4,
-//     },
-//   },
-// });
+//////////
 
 window.addEventListener("click", function (event) {
   const counterNode = event.target.closest(".quantity");
@@ -94,4 +68,19 @@ window.addEventListener("click", function (event) {
       counter.innerText;
     }
   }
+});
+
+////////////
+
+const popup = document.querySelector(".popup");
+const close = document.querySelector(".closeBtn");
+
+window.onload = function () {
+  setTimeout(function () {
+    popup.style.display = "block";
+  }, 4000);
+};
+
+close.addEventListener("click", () => {
+  popup.style.display = "none";
 });
