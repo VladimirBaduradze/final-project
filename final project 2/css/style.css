@@ -86,7 +86,7 @@ h1 img {
 .game img:hover {
   cursor: pointer;
   padding: 2px;
-  border: 2px solid rgb(59, 20, 234);
+  border: 2px solid rgb(255, 255, 255);
 }
 
 .game p,
@@ -128,7 +128,7 @@ button {
 
 ul {
   display: flex;
-  margin-left: 60px;
+  margin-left: 20px;
 }
 
 li {
@@ -181,13 +181,34 @@ nav ul li:hover::after {
   height: 80%;
   overflow-y: auto;
   border-radius: 10px;
-  background-color: #1e5ddb;
+  background-color: #5685e2;
   padding: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
 .newsArticle {
   text-align: justify;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+}
+
+.js-counter {
+  margin-left: 3px;
+  margin-right: 3px;
+  font-family: "PT Sans Narrow", sans-serif;
+  color: #fff;
+}
+
+.quantity button {
+  height: 10px;
+  width: 30px;
+  align-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .newsBottom {
@@ -212,11 +233,11 @@ nav ul li:hover::after {
   margin-bottom: -4px;
 }
 .news-horizontal {
-  margin-top: 100px;
+  margin-top: 120px;
   margin-bottom: 44px;
   margin-left: 100px;
   width: 900px;
-  background-color: #1e5ddb;
+  background-color: #5685e2;
   border-radius: 10px;
   padding: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
@@ -552,6 +573,7 @@ footer p {
   white-space: nowrap;
   width: 90%;
   margin: 20px auto;
+  overflow-y: hidden;
 }
 
 .form-container .send {
@@ -699,7 +721,7 @@ footer p {
 }
 
 .footer {
-  height: 200px;
+  height: 70px;
   background-color: rgb(0, 0, 0);
   box-shadow: 2px 4px 10px black;
   position: relative;
@@ -757,9 +779,8 @@ footer p {
 }
 
 @media only screen and (max-width: 770px) {
-
   ul {
-    margin-left: 10px;
+    margin-left: 20px;
   }
   .contentBox {
     width: 400px;
@@ -903,5 +924,32 @@ footer p {
     width: 250px;
     margin-top: 10px;
     margin-left: -20px;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  ul {
+    font-size: 12px;
+    margin-left: 0px;
+  }
+
+  .contentBox {
+    margin: 140px auto;
+    height: 210px;
+  }
+
+  .today {
+    display: flex;
+    justify-content: center;
+  }
+
+  .map-text p {
+    width: 250px;
+    margin-top: 10px;
+    margin-left: -20px;
+  }
+
+  .card-container .card img {
+    height: 250px;
   }
 }

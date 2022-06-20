@@ -1,5 +1,11 @@
 const navigation = ["Home", "News", "Consoles", "Clients", "About us"];
-const pages = ["index.html", "news.html", "consoles.html", "clients.html","about-us.html"];
+const pages = [
+  "index.html",
+  "news.html",
+  "consoles.html",
+  "clients.html",
+  "about-us.html",
+];
 
 let navtxt = "<ul>";
 for (let i = 0; i < navigation.length; i++) {
@@ -8,10 +14,6 @@ for (let i = 0; i < navigation.length; i++) {
 navtxt += "</ul>";
 
 document.getElementById("navigation").innerHTML = navtxt;
-
-
-
-
 
 const popup = document.querySelector(".popup");
 const close = document.querySelector(".closeBtn");
@@ -41,6 +43,8 @@ $(".owl-carousel").owlCarousel({
   margin: 10,
   responsiveClass: true,
   autoplay: true,
+  autoplayTimeout: 2000,
+  autoplayHoverPause: true,
   responsive: {
     0: {
       items: 1,
@@ -58,20 +62,36 @@ $(".owl-carousel").owlCarousel({
   },
 });
 
-$(".owl-carousel").owlCarousel({
-  items: 2,
-  merge: true,
-  loop: true,
-  margin: 10,
-  video: true,
-  lazyLoad: true,
-  center: true,
-  responsive: {
-    480: {
-      items: 2,
-    },
-    600: {
-      items: 4,
-    },
-  },
+// $(".owl-carousel").owlCarousel({
+//   items: 2,
+//   merge: true,
+//   loop: true,
+//   margin: 10,
+//   video: true,
+//   lazyLoad: true,
+//   center: true,
+//   responsive: {
+//     480: {
+//       items: 2,
+//     },
+//     600: {
+//       items: 4,
+//     },
+//   },
+// });
+
+window.addEventListener("click", function (event) {
+  const counterNode = event.target.closest(".quantity");
+  const counter = counterNode.querySelector("[data-counter]");
+  if (event.target.dataset.action === "plus") {
+    counter.innerText == ++counter.innerText;
+  }
+
+  if (event.target.dataset.action === "minus") {
+    if (counter.innerText > 1) {
+      counter.innerText == --counter.innerText;
+    } else {
+      counter.innerText;
+    }
+  }
 });
