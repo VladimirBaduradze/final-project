@@ -768,6 +768,21 @@ footer p {
   margin-left: 10px;
 }
 
+.thank-you {
+  display: flex;
+  transform: translateY(250px);
+  color: white;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+.thank-you p {
+  text-decoration: underline;
+}
+
 @keyframes slideUp {
   0% {
     opacity: 0;
