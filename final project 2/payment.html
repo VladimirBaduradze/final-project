@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header-main text-white">
+      <p>Place your order today</p>
+    </header>
+    <main>
+      <form
+        autocomplete="off"
+        method="post"
+        target="_blank"
+        action="./success.html"
+      >
+        <!-- method="get" - в строке поиска будут видны все отправленные на сервер данные -->
+        <!-- <input type="text" name="" id="saxeli">
+            <input type="number" name="" id="ricxvi">
+            <input type="color" name="" id="feri">
+            <input type="submit" name="abc" id="submit"> -->
+
+        <!-- inp -->
+        <input
+          class="background-style"
+          type="text"
+          name="name"
+          id="saxeli"
+          placeholder="Name*"
+          required
+        />
+        <input
+          class="background-style"
+          type="text"
+          name="surname"
+          id="gvari"
+          placeholder="Surname*"
+          required
+        />
+        <input
+          class="background-style"
+          type="number"
+          name="telnumber"
+          id="telnomeri"
+          placeholder="Phone Number*"
+          required
+        />
+        <label class="label" for="textarea"
+          >Please indicate Your full address</label
+        >
+        <textarea
+          name=""
+          id="textarea"
+          cols="30"
+          rows="10"
+          class="background-style"
+        ></textarea>
+
+        <label for="paying-methode">
+          Please choose payment methode <br
+        /></label>
+        <div class="checkboxes">
+          <div class="checkbox1">
+            <input type="radio" name="checkbox" id="checkbox1" required />
+            <label for="pirobebi" class="checkbox-labels"
+              ><strong>&#128179; Card</strong></label
+            >
+          </div>
+          <!-- radio -->
+          <div class="checkbox2">
+            <input type="radio" name="checkbox" id="checkbox2" required />
+            <label for="pirobebi" class="checkbox-labels">
+              <strong>&#128181; Cash</strong>
+            </label>
+          </div>
+        </div>
+        <input
+          class="value"
+          type="submit"
+          name="confirmation_button"
+          id="submit"
+          value="Place order"
+        />
+        <input class="value" type="reset" id="reset" value="Delete all" />
+        <div class="caution">
+          <p><span>&#42;</span>Mandatory</p>
+        </div>
+      </form>
+    </main>
+    <footer>
+      <div class="footer">by Vladimir Baduradze</div>
+    </footer>
+  </body>
+</html>
