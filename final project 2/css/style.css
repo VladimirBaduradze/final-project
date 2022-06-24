@@ -1,5 +1,3 @@
-/* do not delete beyond this */
-
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +5,9 @@
   text-decoration: none;
   box-sizing: border-box;
   scroll-behavior: smooth;
+}
+nav {
+  display: flex;
 }
 
 a {
@@ -20,13 +21,17 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  position: relative;
 }
 
 h1 img {
   width: 30px;
   height: 30px;
   position: absolute;
-  top: 100px;
+  top: 10px;
+  left: 10px;
+  z-index: 20;
+  position: fixed;
 }
 
 .today {
@@ -142,7 +147,7 @@ button {
 
 ul {
   display: flex;
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 li {
@@ -204,6 +209,10 @@ nav ul li:hover::after {
   text-align: justify;
 }
 
+.newsSection {
+  visibility: visible;
+}
+
 .quantity {
   display: flex;
   align-items: center;
@@ -261,7 +270,14 @@ nav ul li:hover::after {
   display: flex;
   flex-direction: row;
   cursor: pointer;
-  padding-right: 40px;
+  height: 110px;
+}
+
+.news-arictle p {
+  display: block;
+  height: 50px;
+  overflow: hidden;
+  font-size: 16px;
 }
 
 .article-image {
@@ -297,7 +313,11 @@ nav ul li:hover::after {
   background-color: #ffffffd5;
   width: 100%;
   height: 100%;
-  z-index: 5;
+  z-index: 25;
+}
+
+.fa-cart-arrow-down {
+  color: #fff;
 }
 
 .contentBox {
@@ -461,8 +481,8 @@ nav ul li:hover::after {
   border: none;
   cursor: pointer;
   position: fixed;
-  bottom: 10px;
-  right: 20px;
+  bottom: 20px;
+  right: 15px;
   background-image: url(../img/send-message.png);
   background-color: #04aa6d;
   border: 2px solid rgb(255, 255, 255);
@@ -734,10 +754,15 @@ footer p {
 }
 
 .footer {
-  height: 70px;
+  width: 100%;
+  height: 0px;
   background-color: rgb(0, 0, 0);
-  box-shadow: 2px 4px 10px black;
-  position: relative;
+  color: #ffffff;
+  font-family: "PT Sans Narrow", sans-serif;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: -24px;
   z-index: -1;
 }
 
@@ -745,7 +770,8 @@ footer p {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  margin-bottom: 20px;
+  position: absolute;
+  bottom: -28px;
   margin-left: 10px;
   background-color: #04aa6d;
   border: 2px solid rgb(255, 255, 255);
@@ -806,9 +832,19 @@ footer p {
   }
 }
 
+@media only screen and (max-width: 1200px) {
+  .newsSection {
+    visibility: hidden;
+  }
+  .news-horizontal {
+    width: 70%;
+    margin: 120px auto;
+  }
+}
+
 @media only screen and (max-width: 770px) {
   ul {
-    margin-left: 20px;
+    margin-left: 30px;
   }
   .contentBox {
     width: 400px;
@@ -862,9 +898,22 @@ footer p {
     height: 20px;
     background-size: 10px;
   }
+
+  .newsSection {
+    visibility: hidden;
+  }
+
+  .news-horizontal {
+    width: 80%;
+    margin-left: 20px;
+  }
 }
 
 @media only screen and (max-width: 550px) {
+  ul {
+    font-size: 12px;
+    margin-left: 30px;
+  }
   .contentBox {
     width: 300px;
     height: 230px;
@@ -924,43 +973,32 @@ footer p {
     display: flex;
     justify-content: center;
   }
-}
-
-@media only screen and (max-width: 401px) {
-  /* .upper-navigation {
-    padding: 0px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-  } */
-
-  .ul {
-    font-size: 14px;
+  .news-horizontal {
+    width: 75%;
+    margin-left: 20px;
   }
 
-  .contentBox {
-    margin: 140px auto;
-    height: 210px;
+  .news-horizontal img {
+    width: 70px;
   }
 
-  .today {
-    display: flex;
-    justify-content: center;
+  .news-horizontal h2 {
+    font-size: 20px;
   }
 
-  .map-text p {
-    width: 250px;
-    margin-top: 10px;
-    margin-left: -20px;
+  .news-arictle {
+    height: 90px;
   }
 }
 
 @media only screen and (max-width: 390px) {
   ul {
-    font-size: 12px;
-    margin-left: 0px;
+    font-size: 10px;
+    margin-left: 30px;
   }
-
+  ul a {
+    margin-left: -2px;
+  }
   .contentBox {
     margin: 140px auto;
     height: 210px;
@@ -969,6 +1007,10 @@ footer p {
   .today {
     display: flex;
     justify-content: center;
+  }
+
+  .newsSection {
+    visibility: hidden;
   }
 
   .map-text p {
@@ -979,5 +1021,18 @@ footer p {
 
   .card-container .card img {
     height: 250px;
+  }
+
+  .news-horizontal {
+    width: 75%;
+    margin-left: 20px;
+  }
+
+  .news-arictle p {
+    font-size: 11px;
+  }
+
+  .open-button {
+    right: 5px;
   }
 }
